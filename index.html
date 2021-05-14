@@ -5,17 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Titulo de nuestro sitio web-->
+    <!--Con la etiqueta <link> podemos conectar nuestro archivo CSS y definir algunas cosas mas, por ejemplo para ser mas rapido nuestro sitio, ordenamos que primero cargue la hoja de estilos con el atributo rel="peload"-->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link href="css/styles.css" rel="stylesheet"> <!--El atributo rel es utilizado para definir la relacion con nuestro html, por ejemplo aqui es utilizado para definir que la relacion del archivo CSS con nuestro HTML es ser un stylesheet-->
+    <!--Titulo de nuestro sitio web. Sin este atributo no tomara nuestro CSS.-->
+
     <title>GG Reviews</title>
 
     <!--La etiqueta <style> es para utilizar CSS dentro de nuestro mismo archivo html, se deben utilizar etiquetas que utilicemos dentro de nuestro html, por ejemplo <h1>-->
-    <style>
-        h1 {
-            color: red;
-            font-size: 400%;
-            text-align: center;
-        }
-    </style>
+    <!--
+        <style>
+            h1 {
+                color: red;
+                font-size: 400%;
+                text-align: center;
+            }
+        </style>
+    -->
     <!--La estructura correcta de definir las propiedades es "propiedad: valor;". Las propiedades son muchisimas, basta con buscar en internet y darle diseno a nuestra pagina web-->
 
 </head>
