@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--Hay dos partes en una estructura de HTML, el <head> y el <body> donde este ultimo es donde definiremos el contenido y daremos forma a nuestro sitio web-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo de nuestro sitio web-->
     <title>GG Reviews</title>
 </head>
 
 <body>
+    <!--Utilizamos un <header> para definir el inicio de nuestro sitio, solo puede haber un header, al igual que un <h1> que en este caso, se utiliza dentro de este <header>-->
     <header>
         <h1>Jordy - Creador de GG Reviews</h1>
     </header>
 
+    <!--La etqiueta <nav> funciona para utilizar barras de navegacion o como conocemos los menu de opciones en la parte superior del sitio web, por ejemplo en un sitio de ventas suelen colocar ahi las categorias de sus productos en venta o demas-->
     <nav>
         <a href="#">Inicio</a>
         <a href="#">Reviews</a>
         <a href="#">Noticias</a>
         <a href="#">Trayectoria</a>
     </nav>
+    <!--Hay etiquetas como <ul> acompanada de <li> que sirven para hacer menus despleagables, pero estos se utilizan mas cuando se trata de un menu que abrira otro menu con mas opciones, o niveles-->
 
+    <!--La etiqueta <section> puede utilizarse las veces que queramos, ayuda para maquetar nuestro contenido de acuerdo a las secciones y asi tener un mejor orden y control del proyecto-->
     <section>
         <h2>Sobre mi canal</h2>
 
+        <!--Para agregar una imagen utilizamos la etiqueta <img> que ira acompanada de diferentes atributos dentro, por ejemplo src="" que indica de donde tomara la imagen, ya sea de manera local o web, pero hay mas atributos que pueden usarse, tanto en esta etiqueta como en practicamente todas. La etiqueta <img> no lleva un cierre, solo la apertura.-->
         <img src="img/gg.png">
 
+        <!--Esta es una manera de agregar imagenes, pero de tipo vector, es decir, imagenes que se modifican de acuerdo al tamano de la pantalla. En este caso es tomada del sitio web Tabler Icons y desde ahi ya viene con todos los atributos-->
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="68" height="68" viewBox="0 0 24 24" stroke-width="1" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
             <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
             <line x1="16" y1="5" x2="19" y2="8" />
         </svg>
+
+        <!--Las etiquetas <p> son parrafos que pueden ir en cualquier parte-->
         <p>Es un canal tecnológico enfocado por ahora a los celulares que frecuentemente
         salen a la venta, de diferentes marcas, precios y para todos los gustos y
         bolsillos.</p>
+
+        <!--La etiqueta <a> se utiliza para hacer uso de links o hipervinculos, y este puede conectar con otro archivo html o incluso con un link de internet utilizando el atributo href=""-->
         <a href="#">Youtube</a>
     </section>
 
+    <!--La etiqueta <main> se utiliza para definir el contenido principal de nuestro sitio web, dentro de el puede haber titulos, parrafos, imagenes, todo realmente, con la diferencia que tiene un inicio y final dentro de <main> y </main>-->
     <main>
+    <!--A medida que los titulos llevan menos importancia, debemos ir incrementando los numeros de h, por ejemplo aqui se utiliza <h2> porque este titulo es menos importante que el principal o el del inicio, y asi podemos variar, podemos repetir incluso titulos a partir de <h2> hasta <h6>-->
     <h2>Temáticas</h2>
+        <!--Es importante seccionar nuestro contenido lo mas que podamos, en este caso se secciona de acuerdo a las tematicas, y asi podemos usar cada tematica como una seccion diferente y no una sola seccion para el contenido completo de "Tematicas"-->
         <section>
             <h3>Smartphones</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="68" height="68" viewBox="0 0 24 24" stroke-width="1" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -70,21 +85,28 @@
                 </svg>
             <p>Proin a venenatis nunc. Aenean at vulputate justo, cursus convallis nisl. Integer nec malesuada risus.</p>
         </section>
+    <!--Finalizamos nuestro <main> definiendo que lo anterior es el contenido mas importante de nuestro sitio web-->
     </main>
 
     <section>
         <h2>Contáctame</h2>
 
+            <!--Para utilizar un formulario que a futuro puede hacer alguna conexion a base de datos, se utliza la etiqueta <form>-->
             <form>
+                <!--Con la etiqueta <fielset> definimos un margen, por asi decirlo, de lo que sera nuestro formulario, incluso coloca una linea al rededor del formulario dando una especie de diseno-->
                 <fieldset>
+                    <!--La etiqueta <legend> es utilizada para algun titulo importante o una pequena introduccion de lo que es nuestro formulario, en este caso es para dar indicaciones de que hacer dentro del formulario-->
                     <legend>Para colaboraciones o preguntas, llena todos los campos</legend>
-
+                    
+                    <!--La etiqueta <div> es utilizada para seccionar tambien, pero esta se utiliza cuando no podemos hacer uso de un section o main, en este caso al estar dentro del formulario, vamos a utilizar <div> y esto nos dara un acomodo ya sea en columnas o en filas-->
                     <div>
+                        <<!--<label> seria como un parrafo, pero utilizado para dar indicaciones, por ejemplo aqui es utilizado para definir que deben escribir en nuestro formulario, por ejemplo Nombre: -->>
                         <label>Nombre</label>
-                        <input type="text" placeholder="Escribe tu nombre">
+                        <!--Los input son etiquetas que no cierran, pueden ser de varios tipos, ya sea de texto, de casillas, de marcas, etc y estos ayudan a interactuar con el sitio web, interactuan con el ingreso de informacion-->
+                        <input type="text" placeholder="Escribe tu nombre"> <!--El atributo placeholder="" sirve como guia para colocar un texto de ayuda dentro de un input text, por ejemplo en este caso es utilizado para el dialogo "Escribe tu nombre"-->
                     </div>
 
-                    <div></div>
+                    <div>
                         <label>Poblacion</label>
                         <input type="text" placeholder="Suscriptor/Empresa">
                     </div>
@@ -96,10 +118,12 @@
 
                     <div>
                     <label>Motivo de contacto</label>
-                    <textarea></textarea>
+                    <!--La etiqueta <textarea> ayuda para abrir un cuadro de texto, pero que puede cambiar de tamano y es de ayuda cuando se necesita ingresar mucho texto.-->
+                    <textarea placeholder="Colaboracion, recomendacion, promocion, etc."></textarea>
                     </div>
 
                     <div>
+                    <!--El <input> de tipo "submit" habilita un boton que puede utilizarse para botones de "enviar", por ejemplo, y definimos que texto ira dentro de este boton con el atributo value=""-->
                     <input type="submit" value="Enviar">
                     </div>
 
@@ -108,6 +132,7 @@
 
     </section>
 
+    <!--La etiqueta footer siempre ira al final y marcando asi el final o la parte inferior de nuestro sitio web-->
     <footer>
         <p>Todos los derechos reservados. Jordy Padilla, Creator Content</p>
     </footer>
