@@ -5,9 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Con la etiqueta <link> podemos conectar nuestro archivo CSS y definir algunas cosas mas, por ejemplo para ser mas rapido nuestro sitio, ordenamos que primero cargue la hoja de estilos con el atributo rel="peload"-->
     <!--Titulo de nuestro sitio web. Sin este atributo no tomara nuestro CSS.-->
     <title>GG Reviews</title>
+    <!--Con la etiqueta <link> podemos conectar nuestro archivo CSS y definir algunas cosas mas, por ejemplo para ser mas rapido nuestro sitio, ordenamos que primero cargue la hoja de estilos con el atributo rel="peload"-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;700&display=swap" rel="stylesheet">
@@ -34,13 +36,15 @@
         <h1 class="titulo">GG Reviews <span>by Jordy</span></h1>
     </header>
 
-    <!--La etqiueta <nav> funciona para utilizar barras de navegacion o como conocemos los menu de opciones en la parte superior del sitio web, por ejemplo en un sitio de ventas suelen colocar ahi las categorias de sus productos en venta o demas-->
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Reviews</a>
-        <a href="#">Noticias</a>
-        <a href="#">Trayectoria</a>
-    </nav>
+    <div class="nav-bg">
+        <!--La etqiueta <nav> funciona para utilizar barras de navegacion o como conocemos los menu de opciones en la parte superior del sitio web, por ejemplo en un sitio de ventas suelen colocar ahi las categorias de sus productos en venta o demas-->
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Reviews</a>
+            <a href="#">Noticias</a>
+            <a href="#">Trayectoria</a>
+        </nav>
+    </div>
     <!--Hay etiquetas como <ul> acompanada de <li> que sirven para hacer menus despleagables, pero estos se utilizan mas cuando se trata de un menu que abrira otro menu con mas opciones, o niveles-->
 
     <!--La etiqueta <section> puede utilizarse las veces que queramos, ayuda para maquetar nuestro contenido de acuerdo a las secciones y asi tener un mejor orden y control del proyecto-->
@@ -119,7 +123,7 @@
                     
                     <!--La etiqueta <div> es utilizada para seccionar tambien, pero esta se utiliza cuando no podemos hacer uso de un section o main, en este caso al estar dentro del formulario, vamos a utilizar <div> y esto nos dara un acomodo ya sea en columnas o en filas-->
                     <div>
-                        <<!--<label> seria como un parrafo, pero utilizado para dar indicaciones, por ejemplo aqui es utilizado para definir que deben escribir en nuestro formulario, por ejemplo Nombre: -->>
+                        <!--<label> seria como un parrafo, pero utilizado para dar indicaciones, por ejemplo aqui es utilizado para definir que deben escribir en nuestro formulario, por ejemplo Nombre: -->
                         <label>Nombre</label>
                         <!--Los input son etiquetas que no cierran, pueden ser de varios tipos, ya sea de texto, de casillas, de marcas, etc y estos ayudan a interactuar con el sitio web, interactuan con el ingreso de informacion-->
                         <input type="text" placeholder="Escribe tu nombre"> <!--El atributo placeholder="" sirve como guia para colocar un texto de ayuda dentro de un input text, por ejemplo en este caso es utilizado para el dialogo "Escribe tu nombre"-->
