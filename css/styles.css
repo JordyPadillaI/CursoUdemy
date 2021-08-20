@@ -38,6 +38,17 @@ body{
 
 .navegacion-principal {
     padding: 1rem;
+    display: flex;
+    /* Para el caso de que querramos cambiar la dirección y hacerla
+    en vertical, se utiliza "column" y ahora para centrar, se debe
+    usar "align-items: center" */
+    
+    /*
+    flex-direction: column;
+    align-items: center;
+    */
+
+    justify-content: space-evenly;
 }
 
 .navegacion-principal a{
